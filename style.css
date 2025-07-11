@@ -1,0 +1,976 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full Screen Body*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* allow growth if content is taller than screen */
+  overflow-y: auto;
+  background-color: #fff8e7;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+
+
+
+
+
+/* ========================================== HOME PAGE ================================================================== */
+
+/* Main container */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Title container */
+.title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  /* CENTERING! */
+  text-align: center;
+}
+
+/* Profile Button in top-right */
+.home-page .profile-button {
+  position: absolute;
+  top: -10px;
+  right: 80px;
+  z-index: 10;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.home-page .profile-button img {
+  width: 75px;
+  /* Adjust based on your image size */
+}
+
+.home-page .profile-button:hover {
+  transform: scale(1.1);
+}
+
+
+/* Welcome to */
+.welcome {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.welcome:hover {
+  transform: scale(1.05);
+}
+
+/* QUIZINE title */
+.home-page .title {
+  font-size: 100px;
+  color: #cc0000;
+  text-shadow: 6px 6px #000000;
+  margin-bottom: 5px;
+}
+
+.home-page .title:hover {
+  color: #EFCB68;
+  /* Soft green color */
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #000;
+  margin-top: 20px;
+}
+
+.subtitle:hover {
+  transform: scale(1.05);
+}
+
+/* Start button */
+.start-btn img {
+  width: 160px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.start-btn img:hover {
+  transform: scale(1.2);
+}
+
+/* Cloud images (1080x1080 scaled down) */
+.home-page .cloud {
+  position: absolute;
+  width: 360px;
+  /* Scale down from 1080x1080 */
+}
+
+.cloud-top-right {
+  right: 30px;
+  top: -10px;
+}
+
+.cloud-bottom-left {
+  bottom: -10px;
+  left: 60px;
+}
+
+/* Common star styles */
+.star {
+  position: absolute;
+  object-fit: contain;
+}
+
+/* Left side stars */
+.home-page .star-left-big {
+  top: 100px;
+  left: 80px;
+  width: 100px;
+}
+
+.home-page .star-left-small {
+  top: 130px;
+  left: 160px;
+  width: 75px;
+}
+
+/* Right side stars */
+.home-page .star-right-big {
+  bottom: 100px;
+  right: 80px;
+  width: 100px;
+}
+
+.home-page .star-right-small {
+  bottom: 130px;
+  right: 160px;
+  width: 75px;
+}
+
+.flag-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  top: -100px;
+  margin-bottom: 5px;
+}
+
+.flag-img {
+  width: 96px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 2px #00000044);
+}
+
+.flag-img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* =========================================== QUESTION PAGE ====================================================== */
+
+/* General Styling */
+body.question-page {
+  margin: 0;
+  padding: 0;
+  background-color: #fff9e6;
+  font-family: 'Press Start 2P', cursive;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* QUIZINE Title */
+.question-page .title {
+  text-align: center;
+  font-size: 36px;
+  color: #cc0000;
+  text-shadow: 4px 4px #000;
+  margin-top: 40px;
+}
+
+.question-page .title:hover {
+  transform: scale(1.05);
+  /* grow by 5% on hover */
+}
+
+/* Question Box */
+.question-box {
+  background-color: #e3e3e3;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 4px 4px 0px #000;
+}
+
+/* Question Header */
+.question-number {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Question Image */
+.question-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid #000;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+/* Question Text */
+.question-text {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.option-button {
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid transparent;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #fffacd;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.option-button.correct {
+  border-color: green;
+}
+
+.option-button.incorrect {
+  border-color: red;
+}
+
+.options button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  background-color: #f4ca59;
+  border: 3px solid #000;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  width: 200px;
+}
+
+.options button:hover {
+  transform: scale(1.05);
+  background-color: #ffe37e;
+}
+
+/* Cloud images (1080x1080 scaled down) */
+/* Clouds & Stars - Question Page */
+/* Clouds & Stars - Question Page (Improved Layout) */
+.question-page .cloud-top-right {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  width: 300px;
+  z-index: 1;
+}
+
+.question-page .cloud-bottom-left {
+  position: absolute;
+  bottom: -10px;
+  /* was -30px */
+  left: -40px;
+  /* was 10px */
+  width: 260px;
+  /* was 300px */
+  z-index: 1;
+}
+
+.question-page .star-top-left-big {
+  position: absolute;
+  top: 100px;
+  /* was 80px */
+  left: 40px;
+  /* was 60px */
+  width: 90px;
+  z-index: 1;
+}
+
+.question-page .star-top-left-small {
+  position: absolute;
+  top: 150px;
+  /* was 130px */
+  left: 110px;
+  /* was 130px */
+  width: 70px;
+  z-index: 1;
+}
+
+.question-page .star-bottom-right-big {
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  width: 90px;
+  z-index: 1;
+}
+
+.question-page .star-bottom-right-small {
+  position: absolute;
+  bottom: 130px;
+  right: 120px;
+  width: 70px;
+  z-index: 1;
+}
+
+
+/* Navigation Button Container */
+.navigation-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* 🔴 Back & Next Buttons */
+.navigation-buttons button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  background-color: #cc0000;
+  color: white;
+  border: 3px solid #000;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  width: 140px;
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.navigation-buttons button:hover:enabled {
+  transform: scale(1.05);
+  background-color: #ff6666;
+}
+
+/* 🔵 Finish Button */
+.finish-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  background-color: #8cd4ff;
+  color: black;
+  border: 3px solid #000;
+  padding: 12px 20px;
+  border-radius: 15px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: 30px;
+  width: 140px;
+}
+
+.finish-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.finish-button:hover:enabled {
+  background-color: #aee7ff;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+/* =================================================== RESULTS PAGE ====================================================== */
+
+.result-page {
+  background-color: #fff8e7;
+  font-family: 'Press Start 2P', cursive;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* QUIZINE Title */
+.result-page .title {
+  text-align: center;
+  font-size: 36px;
+  color: #cc0000;
+  text-shadow: 4px 4px #000;
+  margin-top: 40px;
+}
+
+.result-page .title:hover {
+  transform: scale(1.05);
+  /* grow by 5% on hover */
+}
+
+/* Restart Button on Results Page */
+.result-page .restart-button {
+  position: fixed;
+  /* or absolute if your page is not scrollable */
+  bottom: 10px;
+  right: 40px;
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+}
+
+.result-page .restart-button img {
+  width: 75px;
+  /* adjust size as needed */
+}
+
+.result-page .restart-button:hover {
+  transform: scale(1.1);
+}
+
+/* Container */
+.result-page .container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Result Box */
+.result-page .result-box {
+  background-color: #d9d9d9;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 30px;
+  text-align: center;
+  border: 4px solid #000;
+  transition: background-color 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+
+.result-page .result-box:hover {
+  background-color: #a4d4a2;
+  /* Soft green color */
+}
+
+/* Main Result Text */
+.result-page .result-title {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.result-page .score {
+  font-size: 10px;
+  margin-bottom: 30px;
+}
+
+/* Score Tiers */
+.result-page .score-tier {
+  background-color: #ffd966;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  font-size: 9px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.result-page .score-tier.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.result-page .score-tier:hover {
+  transform: scale(1.05);
+  /* grow by 5% on hover */
+}
+
+/* Decorative Elements - Results Page */
+/* Decorative Elements - Results Page */
+.result-page .cloud.top-right {
+  top: -30px;
+  right: 10px;
+  width: 300px;
+}
+
+.result-page .cloud.bottom-left {
+  bottom: -30px;
+  left: 10px;
+  width: 300px;
+}
+
+.result-page .star.top-left-big {
+  top: 80px;
+  left: 60px;
+  width: 90px;
+}
+
+.result-page .star.top-left-small {
+  top: 130px;
+  left: 130px;
+  width: 70px;
+}
+
+.result-page .star.bottom-right-big {
+  bottom: 80px;
+  right: 60px;
+  width: 90px;
+}
+
+.result-page .star.bottom-right-small {
+  bottom: 130px;
+  right: 120px;
+  width: 70px;
+}
+
+/* Stars and Clouds */
+.star {
+  position: absolute;
+  width: 50px;
+}
+
+.top-left-big {
+  top: 100px;
+  left: 80px;
+  width: 100px;
+}
+
+.top-left-small {
+  top: 130px;
+  left: 160px;
+  width: 75px;
+}
+
+.bottom-right-big {
+  bottom: 100px;
+  right: 80px;
+  width: 100px;
+}
+
+.bottom-right-small {
+  bottom: 130px;
+  right: 160px;
+  width: 75px;
+}
+
+.cloud {
+  position: absolute;
+  width: 360px;
+}
+
+.top-right {
+  top: -10px;
+  right: 10px;
+}
+
+.bottom-left {
+  bottom: -10px;
+  left: 25px;
+}
+
+
+
+
+
+
+
+
+
+/* =============================================== PROFILE PAGE ==================================================== */
+
+/* Close Button (Top Right of Profile Page) */
+.profile-page .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-page .close-button img {
+  width: 75px;
+  /* atau sesuaikan ukuran tombolmu */
+}
+
+.profile-page .close-button:hover {
+  transform: scale(1.1);
+}
+
+.profile-page {
+  background-color: #fff8e7;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.profile-page .container {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title */
+.profile-page .title {
+  font-size: 36px;
+  color: #cc0000;
+  text-shadow: 4px 4px #000;
+  margin-top: 40px;
+}
+
+/* Subtitle */
+.profile-page .subtitle {
+  font-size: 12px;
+  margin: 20px 0 50px;
+}
+
+.profile-page .title:hover {
+  transform: scale(1.2);
+}
+
+
+/* Character Profiles */
+.profiles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  /* CENTERING! */
+  text-align: center;
+  gap: 60px;
+  display: flex;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.character img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.character p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.character:hover p {
+  color: #cc0000;
+}
+
+/* Unique Hover Effects */
+.character.diera:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.character.aulia:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.character.michelle:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.character.chris:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.character.puan:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.character.suryo:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+/* Decorative Elements */
+.star {
+  position: absolute;
+  width: 50px;
+}
+
+.top-left-big {
+  top: 100px;
+  left: 80px;
+  width: 100px;
+}
+
+.top-left-small {
+  top: 130px;
+  left: 160px;
+  width: 75px;
+}
+
+.bottom-right-big {
+  bottom: 100px;
+  right: 80px;
+  width: 100px;
+}
+
+.bottom-right-small {
+  bottom: 130px;
+  right: 160px;
+  width: 75px;
+}
+
+.cloud {
+  position: absolute;
+  width: 360px;
+}
+
+.top-right {
+  top: -10px;
+  right: 30px;
+}
+
+.bottom-left {
+  bottom: -40px;
+  left: 30px;
+}
+
+/* ======================= RESPONSIVENESS ========================== */
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+
+  .container,
+  .result-page .result-box,
+  .question-box {
+    padding: 15px;
+  }
+
+  .home-page .title {
+    font-size: 60px;
+  }
+
+  .question-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .options button,
+  .navigation-buttons button,
+  .finish-button {
+    width: 120px;
+    font-size: 8px;
+    padding: 10px;
+  }
+
+  .cloud,
+  .result-page .cloud,
+  .question-page .cloud-top-right,
+  .question-page .cloud-bottom-left,
+  .profile-page .cloud {
+    width: 200px;
+  }
+
+  .star,
+  .result-page .star,
+  .question-page .star-top-left-big,
+  .question-page .star-top-left-small,
+  .question-page .star-bottom-right-big,
+  .question-page .star-bottom-right-small {
+    width: 50px !important;
+  }
+
+  .profiles {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Phones (<= 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .home-page .title {
+    font-size: 32px;
+  }
+
+  .welcome,
+  .subtitle,
+  .result-page .score,
+  .result-page .result-title {
+    font-size: 10px;
+  }
+
+  .question-page .title,
+  .result-page .title,
+  .profile-page .title {
+    font-size: 24px;
+  }
+
+  .question-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .question-text {
+    font-size: 9px;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options button,
+  .navigation-buttons button,
+  .finish-button {
+    width: 100%;
+    font-size: 9px;
+    padding: 10px;
+  }
+
+  .result-page .result-box {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .result-page .score-tier {
+    font-size: 8px;
+    padding: 12px;
+  }
+
+  .star,
+  .cloud,
+  .question-page .cloud-top-right,
+  .question-page .cloud-bottom-left,
+  .profile-page .cloud {
+    width: 120px;
+  }
+
+  .profiles {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .character img {
+    width: 100px;
+  }
+
+  .character p {
+    font-size: 9px;
+  }
+
+  .result-page .restart-button {
+    bottom: 5px;
+    right: 20px;
+  }
+
+  .result-page .restart-button img {
+    width: 60px;
+  }
+}
+
+/* Make base font and container responsive */
+body {
+  font-size: 16px;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Ensure the main content container scales */
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Responsive image */
+img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Button layout */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.options button {
+  flex: 1 1 45%;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Result card */
+.result-card {
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header and quiz title */
+h1,
+h2,
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Media query for phones */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .options button {
+    flex: 1 1 100%;
+  }
+
+  .result-card {
+    padding: 1rem;
+  }
+}

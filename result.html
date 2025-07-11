@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quizine - Results</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="result-page">
+  <div class="container">
+
+    <!-- Title -->
+    <h1 class="title">QUIZINE</h1>
+    <!-- Restart Button (Bottom Right) -->
+    <a href="index.html" class="restart-button">
+    <img src="src/restart button.png" alt="Restart Button" />
+    </a>
+
+    <!-- Decorative Background -->
+    <img src="src/star.png" class="star top-left-big" alt="star">
+    <img src="src/star.png" class="star top-left-small" alt="star">
+    <img src="src/star.png" class="star bottom-right-big" alt="star">
+    <img src="src/star.png" class="star bottom-right-small" alt="star">
+
+    <img src="src/cloud.png" class="cloud top-right" alt="cloud">
+    <img src="src/cloud.png" class="cloud bottom-left" alt="cloud">
+
+    <!-- Result Box -->
+    <div class="result-box">
+      <p class="result-title">You’ve Completed Quizine!</p>
+      <p class="score">Your foodie score is: <strong id="points"></strong></p>
+
+      <div class="score-tier">
+        <p><strong>9–10:</strong><br>
+          🌶️ Rasa Royalty!<br>
+          You’ve mastered the menu like a true culinary king or queen of Nusantara.
+        </p>
+      </div>
+
+      <div class="score-tier">
+        <p><strong>6–8:</strong><br>
+          🧂 Spicy Scholar!<br>
+          You’ve got great taste—just a few dishes short of greatness.
+        </p>
+      </div>
+
+      <div class="score-tier">
+        <p><strong>0–5:</strong><br>
+          🍜 Beginner Baker!<br>
+          Still learning the recipes of the land. Keep tasting and trying!
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
